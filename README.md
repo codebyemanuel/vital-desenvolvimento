@@ -1,13 +1,13 @@
-# Grupo Vital — HTML/CSS/JavaScript + Next.js
+# Grupo Vital — site final pronto
 
-[**Baixar grupo-vital-premium.zip**](https://github.com/codebyemanuel/vital-desenvolvimento/raw/refs/heads/main/downloads/grupo-vital-premium.zip)
+[**Baixar o site pronto**](https://github.com/codebyemanuel/vital-desenvolvimento/raw/refs/heads/main/downloads/grupo-vital-site-pronto.zip)
 
-O download principal reúne as duas versões completas em um ZIP: `html-css-javascript/` e `nextjs/`. Ambas incluem as fotos reais, cópias otimizadas e os logotipos oficiais. Abra a pasta `html-css-javascript` para executar no VS Code com Live Server, sem Node.js, npm ou build. Consulte [a orientação do pacote](docs/ENTREGA.md).
+A entrega principal agora é um único site pronto, com `index.html` na raiz do ZIP. Inclui a home, as três páginas das unidades, CSS, JavaScript, fontes, fotos reais, logotipos oficiais, animações, galeria e menu mobile. Não precisa de Node.js, npm ou build.
 
 ## Abrir no VS Code
 
 1. Extraia o ZIP inteiro.
-2. Abra a pasta `html-css-javascript`, dentro de `grupo-vital-premium`, que contém `index.html`.
+2. Abra a pasta extraída, que já contém `index.html` na raiz.
 3. Instale a extensão **Live Server**, de Ritwick Dey.
 4. Clique com o botão direito em `index.html` → **Open with Live Server**.
 
@@ -25,6 +25,8 @@ Fotos, fontes, ícones, GSAP e ScrollTrigger estão locais. O site mantém a dir
 Leia o [README da versão HTML](site-html/README.md) e a [validação própria dessa versão](site-html/VALIDACAO.md).
 
 ## Manutenção no repositório
+
+Para recriar a entrega principal, execute `python3 scripts/package-ready.py`. O resultado é `dist/grupo-vital-site-pronto.zip`. O pacote com as duas bases permanece separado em `downloads/grupo-vital-premium.zip`; não é necessário para abrir o site pronto.
 
 A base original em Next.js permanece na raiz; suas instruções estão em [docs/NEXTJS.md](docs/NEXTJS.md). Ela não é uma dependência da versão HTML entregue.
 

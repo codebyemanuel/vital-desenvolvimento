@@ -1,0 +1,16 @@
+GRUPO VITAL — SITE FINAL
+
+Extraia este ZIP inteiro para uma pasta.
+A entrada do site é o arquivo index.html, na raiz dessa pasta.
+
+NO VISUAL STUDIO CODE:
+Abra a pasta extraída, clique com o botão direito em index.html
+e escolha "Open with Live Server".
+
+Não é necessário usar Node.js, npm, terminal ou fazer build.
+O site, as quatro páginas, o CSS, o JavaScript, as fontes, as fotos
+e os logotipos já estão incluídos e conectados.
+
+Não mova index.html separado das pastas assets e public.
+
+Para editar contatos e informações: assets/js/config.js.
