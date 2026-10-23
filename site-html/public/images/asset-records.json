@@ -1,0 +1,56 @@
+[
+  {
+    "unit": "forca-vital",
+    "kind": "photo",
+    "original": "public/images/originals/forca-vital/photo.jpg",
+    "optimized": "public/images/optimized/forca-vital/espaco.webp",
+    "sha256": "67b002cabee31f7cf49b3644af5169ccce0dbbe33e8874ccb6c48bd91f09f910",
+    "width": 2268,
+    "height": 4032
+  },
+  {
+    "unit": "forca-vital",
+    "kind": "logo",
+    "original": "public/images/originals/forca-vital/logo.jpg",
+    "optimized": "public/logos/forca-vital/logo.webp",
+    "sha256": "819642c839aa0cb13b886d348b73203c5aaa847811de6c616ba1036b96e29a70",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "unit": "ct-general",
+    "kind": "photo",
+    "original": "public/images/originals/ct-general/photo.png",
+    "optimized": "public/images/optimized/ct-general/espaco.webp",
+    "sha256": "6bf39278344b02c7bd8b9b44362ce4709b8b9468cc70b1100a819fe459f3a75c",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "unit": "ct-general",
+    "kind": "logo",
+    "original": "public/images/originals/ct-general/logo.jpg",
+    "optimized": "public/logos/ct-general/logo.webp",
+    "sha256": "9dfa40507dc6718b06e52043c8fbc57225ae53d07d437f04f2ebdb0ef5a5d3e2",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "unit": "vital-beach",
+    "kind": "photo",
+    "original": "public/images/originals/vital-beach/photo.png",
+    "optimized": "public/images/optimized/vital-beach/espaco.webp",
+    "sha256": "712379581bb1fb0de8127f0e9a4fa5f982241c2456870568468751f8ef52a101",
+    "width": 941,
+    "height": 1672
+  },
+  {
+    "unit": "vital-beach",
+    "kind": "logo",
+    "original": "public/images/originals/vital-beach/logo.jpg",
+    "optimized": "public/logos/vital-beach/logo.webp",
+    "sha256": "e1a0205f46e8193ff9b68a0195cb31a25c20d6c09d0c835e6d917c08b0d94bf1",
+    "width": 150,
+    "height": 150
+  }
+]

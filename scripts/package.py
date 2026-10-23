@@ -3,9 +3,9 @@ from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 
 root = Path(__file__).resolve().parent.parent
-target = root / 'dist' / 'grupo-vital-premium.zip'
+target = root / 'dist' / 'grupo-vital-nextjs.zip'
 target.parent.mkdir(exist_ok=True)
-excluded_dirs = {'.git', 'node_modules', '.next', 'out', 'dist', 'downloads', 'test-results', 'playwright-report', '__pycache__'}
+excluded_dirs = {'.git', 'node_modules', '.next', 'out', 'dist', 'downloads', 'site-html', 'tests-static', 'test-results', 'playwright-report', '__pycache__'}
 with ZipFile(target, 'w', compression=ZIP_DEFLATED, compresslevel=9) as archive:
     for item in sorted(root.rglob('*')):
         relative = item.relative_to(root)

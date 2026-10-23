@@ -1,0 +1,21 @@
+GRUPO VITAL — PRONTO EM HTML, CSS E JAVASCRIPT
+
+1. Extraia TODO o ZIP. Não abra o site de dentro do arquivo compactado.
+2. No VS Code, vá em Arquivo > Abrir Pasta.
+3. Escolha a pasta grupo-vital-premium que contém index.html.
+4. Instale a extensão Live Server, de Ritwick Dey, se ainda não tiver.
+5. Clique com o botão direito em index.html > Open with Live Server.
+
+Pronto: o navegador abre o site, com CSS, JavaScript, fotos e logotipos locais.
+Não precisa instalar Node.js, executar npm install ou fazer build.
+
+EDITAR:
+- Conteúdo e contatos: assets/js/config.js
+- Aparência e responsividade: assets/css/styles.css
+- Comportamentos e animações: assets/js/main.js
+- Home: index.html
+- Unidades: forca-vital/index.html, ct-general/index.html e vital-beach/index.html
+
+Mantenha as pastas assets e public junto do index.html.
+Os originais estão preservados em public/images/originals.
+Veja README.md para mais detalhes.
