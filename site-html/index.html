@@ -20,7 +20,9 @@
     <script src="./assets/js/config.js" defer></script>
     <script src="./assets/vendor/gsap.min.js" defer></script>
     <script src="./assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="./assets/js/schedule.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/schedule.css">
   </head>
   <body id="top" data-page="home">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -31,6 +33,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="./index.html#unidades">Nossas unidades</a>
+        <a href="#horarios" data-schedule-nav="">Horários</a>
         <a href="./index.html#essencia">O grupo</a>
         <a href="./index.html#espacos">Os espaços</a>
       </nav>
@@ -67,6 +70,7 @@
               <path d="M7 17 17 7"></path>
             </svg>
           </a>
+          <a href="#horarios" data-schedule-nav="" class="mobile-about mobile-schedule">Horários</a>
           <a class="mobile-about" href="./index.html#essencia">Conheça o Grupo Vital</a>
         </nav>
         <p>Três experiências. Uma força.</p>
@@ -246,6 +250,382 @@
             </div>
             <p>Para dividir a energia do esporte.</p>
           </a>
+        </section>
+        <section class="section activity-schedule" id="horarios" aria-labelledby="schedule-title" data-activity-schedule data-initial-unit="forca-vital" style="--accent:#dfbc71">
+          <div class="section-heading schedule-heading" data-reveal>
+            <div>
+              <p class="eyebrow">SUA ROTINA EM MOVIMENTO</p>
+              <h2 id="schedule-title">SEU TREINO.<br>
+                <span>NA HORA CERTA.</span>
+              </h2>
+            </div>
+            <p class="section-description">Encontre seu ritmo. Escolha a unidade e veja os horários das atividades.</p>
+          </div>
+          <div class="schedule-tabs" role="tablist" aria-label="Unidade da programação">
+            <button type="button" class="schedule-tab" role="tab" id="schedule-tab-forca-vital" data-schedule-unit="forca-vital" aria-controls="schedule-panel" aria-selected="true" tabindex="0" style="--unit-color:#dfbc71">Força Vital</button>
+            <button type="button" class="schedule-tab" role="tab" id="schedule-tab-ct-general" data-schedule-unit="ct-general" aria-controls="schedule-panel" aria-selected="false" tabindex="-1" style="--unit-color:#c6b480">CT General</button>
+            <button type="button" class="schedule-tab" role="tab" id="schedule-tab-vital-beach" data-schedule-unit="vital-beach" aria-controls="schedule-panel" aria-selected="false" tabindex="-1" style="--unit-color:#f1cd53">Vital Beach</button>
+          </div>
+          <div class="schedule-panel" id="schedule-panel" role="tabpanel" aria-labelledby="schedule-tab-forca-vital" tabindex="0">
+            <div class="schedule-controls">
+              <div class="schedule-filters">
+                <div class="schedule-filter">
+                  <label for="schedule-day">Dia da semana</label>
+                  <select id="schedule-day" name="schedule-day">
+                    <option value="todos">Todos os dias</option>
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                  </select>
+                </div>
+                <div class="schedule-filter">
+                  <label for="schedule-period">Período</label>
+                  <select id="schedule-period" name="schedule-period">
+                    <option value="todos">Todos os períodos</option>
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                  </select>
+                </div>
+                <div class="schedule-filter" data-modality-filter hidden>
+                  <label for="schedule-modality">Modalidade</label>
+                  <select id="schedule-modality" name="schedule-modality">
+                    <option value="todas">Todas as modalidades</option>
+                  </select>
+                </div>
+              </div>
+              <a class="schedule-contact" href="https://www.instagram.com/forcavitalfitness_/" target="_blank" rel="noopener noreferrer">Consultar Força Vital<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M7 7h10v10M7 17 17 7"></path>
+                </svg>
+              </a>
+            </div>
+            <p class="schedule-status" role="status" aria-live="polite" aria-atomic="true">Força Vital · 29 horários em 5 dias</p>
+            <div class="schedule-grid" data-day-count="5">
+              <section class="schedule-day" data-schedule-day="segunda" aria-labelledby="horarios-segunda">
+                <div class="schedule-day-header">
+                  <span class="schedule-day-index" aria-hidden="true">01</span>
+                  <h3 id="horarios-segunda">Segunda-feira</h3>
+                  <span class="schedule-day-count">7 opções</span>
+                </div>
+                <div class="schedule-period">
+                  <h4>Manhã</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Spinning" data-start="07:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:00">07:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Spinning</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="G Local" data-start="07:30" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:30">07:30</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">G Local</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Alongamento" data-start="08:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="08:00">08:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Alongamento</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="schedule-period">
+                  <h4>Noite</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Treinamento funcional" data-start="18:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="18:00">18:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Treinamento funcional</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Fit Dance" data-start="19:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="19:00">19:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Fit Dance</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Spinning" data-start="19:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="19:00">19:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Spinning</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Boxe" data-start="20:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="20:00">20:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Boxe</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="schedule-day" data-schedule-day="terca" aria-labelledby="horarios-terca">
+                <div class="schedule-day-header">
+                  <span class="schedule-day-index" aria-hidden="true">02</span>
+                  <h3 id="horarios-terca">Terça-feira</h3>
+                  <span class="schedule-day-count">5 opções</span>
+                </div>
+                <div class="schedule-period">
+                  <h4>Manhã</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Treinamento funcional" data-start="07:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:00">07:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Treinamento funcional</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Ritmos / Zumba" data-start="08:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="08:00">08:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Ritmos / Zumba</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="GAP" data-start="09:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="09:00">09:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">GAP</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="schedule-period">
+                  <h4>Noite</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Alongamento / Pilates no solo" data-start="18:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="18:00">18:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Alongamento / Pilates no solo</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Glúteo" data-start="20:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="20:00">20:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Glúteo</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="schedule-day" data-schedule-day="quarta" aria-labelledby="horarios-quarta">
+                <div class="schedule-day-header">
+                  <span class="schedule-day-index" aria-hidden="true">03</span>
+                  <h3 id="horarios-quarta">Quarta-feira</h3>
+                  <span class="schedule-day-count">8 opções</span>
+                </div>
+                <div class="schedule-period">
+                  <h4>Manhã</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Spinning" data-start="07:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:00">07:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Spinning</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="G Local" data-start="07:30" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:30">07:30</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">G Local</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Alongamento" data-start="08:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="08:00">08:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Alongamento</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="schedule-period">
+                  <h4>Noite</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Treinamento funcional" data-start="18:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="18:00">18:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Treinamento funcional</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Fit Dance" data-start="19:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="19:00">19:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Fit Dance</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Spinning" data-start="19:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="19:00">19:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Spinning</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Boxe" data-start="20:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="20:00">20:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Boxe</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Forró" data-start="21:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="21:00">21:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Forró</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="schedule-day" data-schedule-day="quinta" aria-labelledby="horarios-quinta">
+                <div class="schedule-day-header">
+                  <span class="schedule-day-index" aria-hidden="true">04</span>
+                  <h3 id="horarios-quinta">Quinta-feira</h3>
+                  <span class="schedule-day-count">5 opções</span>
+                </div>
+                <div class="schedule-period">
+                  <h4>Manhã</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Treinamento funcional" data-start="07:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:00">07:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Treinamento funcional</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Ritmos / Zumba" data-start="08:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="08:00">08:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Ritmos / Zumba</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="GAP" data-start="09:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="09:00">09:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">GAP</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="schedule-period">
+                  <h4>Noite</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Alongamento / Pilates no solo" data-start="18:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="18:00">18:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Alongamento / Pilates no solo</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Glúteo" data-start="20:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="20:00">20:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Glúteo</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="schedule-day" data-schedule-day="sexta" aria-labelledby="horarios-sexta">
+                <div class="schedule-day-header">
+                  <span class="schedule-day-index" aria-hidden="true">05</span>
+                  <h3 id="horarios-sexta">Sexta-feira</h3>
+                  <span class="schedule-day-count">4 opções</span>
+                </div>
+                <div class="schedule-period">
+                  <h4>Manhã</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Spinning" data-start="07:00" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:00">07:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Spinning</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="G Local" data-start="07:30" data-period="manha">
+                      <span class="schedule-time">
+                        <time datetime="07:30">07:30</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">G Local</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="schedule-period">
+                  <h4>Noite</h4>
+                  <ul class="schedule-list">
+                    <li class="schedule-slot" data-activity="Treinamento funcional" data-start="18:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="18:00">18:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Treinamento funcional</span>
+                      </span>
+                    </li>
+                    <li class="schedule-slot" data-activity="Forró" data-start="21:00" data-period="noite">
+                      <span class="schedule-time">
+                        <time datetime="21:00">21:00</time>
+                      </span>
+                      <span class="schedule-activity">
+                        <span class="schedule-activity-name">Forró</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <p class="schedule-note">Fit Dance e Spinning começam às 19h nas segundas e quartas, conforme a grade informada.</p>
+            <p class="schedule-footer">Confirme vagas e eventuais alterações de horários diretamente com a unidade.</p>
+          </div>
         </section>
         <section class="section spaces-section" id="espacos">
           <div class="section-heading" data-reveal="true">

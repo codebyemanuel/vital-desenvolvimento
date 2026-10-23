@@ -52,7 +52,7 @@ As páginas contêm o HTML completo; a navegação principal e o conteúdo inici
 Abra `assets/js/config.js`. Os campos de cada unidade permitem alterar nome, descrições, Instagram, telefone, WhatsApp, endereço, modalidades, estrutura, horários, planos, fotografias, logotipos e galeria. `null` e listas vazias representam informações não fornecidas.
 
 - **WhatsApp:** preencha `whatsapp` com o número real, somente dígitos, incluindo país e DDD. O botão aparece automaticamente quando houver um número válido.
-- **Horários:** preencha `hours` com objetos contendo `days` e `time`.
+- **Funcionamento da unidade (opcional):** preencha `hours` com objetos contendo `days` e `time`. Para horários das aulas, use `activitySchedule`, descrito abaixo.
 - **Planos:** preencha `plans` com objetos contendo `name` e `price`.
 - **Fotos da galeria:** adicione objetos `{ "src": "public/images/optimized/unidade/nova-foto.webp", "alt": "Descrição real da fotografia" }` em `gallery`. Coloque o arquivo no caminho indicado.
 - **Identificadores:** mantenha os valores `slug`, pois correspondem às pastas das páginas.
@@ -60,6 +60,23 @@ Abra `assets/js/config.js`. Os campos de cada unidade permitem alterar nome, des
 A configuração aplica os dados ao navegador. Para alterar textos institucionais da home ou a estrutura das páginas, edite também os arquivos HTML. Para SEO e compartilhamento em redes sociais, mantenha os textos de `<title>` e `<meta>` dos HTMLs consistentes com o conteúdo configurado.
 
 O destino de contato atual é o Instagram oficial de cada unidade. Não são inventados números, endereços, horários, planos ou preços. O contato combina a visita com a equipe, sem confirmar um agendamento automaticamente.
+
+## Horários das atividades
+
+A aba **Horários** aparece no menu da home e das páginas das unidades. Mantém o estilo escuro e dourado, com filtros por unidade, dia da semana, período e, na Vital Beach, modalidade. As abas funcionam por teclado e a grade inicial também está presente no HTML.
+
+Os horários foram transcritos das imagens fornecidas pelo responsável:
+
+- **Força Vital:** 29 opções na semana, de segunda a sexta. Fit Dance e Spinning permanecem às 19h nas segundas e quartas, conforme a imagem.
+- **Vital Beach:** 30 registros de futevôlei, incluindo os cinco períodos marcados como Livre, e seis de funcional. Há Kids às terças e quintas, às 17h. A nomenclatura usa Iniciante A, conforme a correção do responsável.
+- **Funcional da Vital Beach:** terça e quinta às 07h e 19h; sábado das 07h às 08h e das 08h às 09h.
+- **CT General:** programação a confirmar; não foram fornecidos horários dessa unidade.
+
+Edite `activitySchedule` de cada unidade em `assets/js/config.js`. Cada registro contém `day` (segunda, terca, quarta, quinta, sexta, sabado, domingo), `start`, `end` (somente quando informado), `activity`, `period` (manha, tarde, noite) e, quando aplicável, `modality` (futevolei ou funcional). Os períodos livres têm `kind: "livre"`.
+
+Os horários das fotos, em geral, indicam apenas o início. Não foi presumida a duração das aulas. Os registros de sábado têm início e fim porque a imagem os informa explicitamente. A divisão manhã/tarde/noite segue a grade de cada unidade; na Vital Beach, as aulas das 18h pertencem ao bloco da tarde mostrado na imagem.
+
+Alterações na configuração aparecem ao recarregar a página, sem build. Na manutenção do repositório, `python3 scripts/sync-schedule.py` atualiza também a grade HTML inicial para acesso sem JavaScript; não é necessário executar essa ferramenta para abrir o site.
 
 ## Preservação das fotos e dos logotipos
 

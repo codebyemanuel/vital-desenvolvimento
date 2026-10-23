@@ -13,6 +13,11 @@ A entrega principal agora é um único site pronto, com `index.html` na raiz do 
 
 Se baixar o repositório por **Code → Download ZIP**, abra a pasta `site-html/` dentro dele.
 
+
+## Horários das atividades
+
+A aba **Horários** está na home e nas páginas das unidades, no mesmo estilo escuro e dourado. Tem filtros por unidade, dia, período e modalidade. As grades de Força Vital e Vital Beach foram transcritas das imagens fornecidas, com a correção para **Iniciante A**. O CT General permanece com programação a confirmar. Os dados estão em `site-html/assets/js/config.js`, no campo `activitySchedule`.
+
 ## Arquivos editáveis
 
 - `site-html/index.html` e páginas das unidades: conteúdo e estrutura HTML.

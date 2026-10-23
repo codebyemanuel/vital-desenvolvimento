@@ -37,10 +37,10 @@ As duas pastas incluem os seis originais, três fotografias otimizadas e três l
 
 Telefones, WhatsApp, endereço, horários, planos e domínio devem ser preenchidos com informações reais. Os links oficiais de Instagram já estão configurados. Nenhuma mensagem é enviada automaticamente.
 
-As duas versões compartilham a mesma base visual, mas são projetos independentes: alterações em uma pasta não atualizam automaticamente a outra.
+As duas versões compartilham a mesma base visual, mas são projetos independentes: alterações em uma pasta não atualizam automaticamente a outra. A nova aba de horários foi adicionada à versão HTML do site final; a pasta Next.js preserva a implementação original.
 
 ## Validação
 
-A versão HTML teve 21 testes de navegador aprovados, com galeria, navegação, menu móvel, dados configuráveis, acessibilidade automática e telas de 320 a 1440 px. A versão Next.js também teve 21 testes aprovados na validação da implementação original. Em cada suíte, somente o menu móvel em viewport desktop não se aplica. Os relatórios estão nos arquivos de validação de cada versão.
+A versão HTML teve 37 testes de navegador aprovados, com galeria, navegação, menu móvel, filtros e grade de horários das atividades, dados configuráveis, acessibilidade automática e telas de 320 a 1440 px. A versão Next.js também teve 21 testes aprovados na validação da implementação original. Em cada suíte, somente o menu móvel em viewport desktop não se aplica. Os relatórios estão nos arquivos de validação de cada versão.
 
 Este ZIP não contém `node_modules`, builds ou arquivos privados de ambiente. Não é preciso abrir a pasta inteira do pacote como projeto: abra apenas a versão que deseja executar.

@@ -145,7 +145,17 @@
       }
       section.append(dl);
     }
-    detail(0, current.hours.map((hour) => [hour.days, hour.time]), "Programação a confirmar. Consulte os horários diretamente com a unidade.");
+    const hasActivities = Boolean(current.activitySchedule?.length);
+    detail(0, current.hours.map((hour) => [hour.days, hour.time]), hasActivities
+      ? "Confira a grade completa das atividades."
+      : "Programação a confirmar. Consulte os horários diretamente com a unidade.");
+    if (hasActivities) {
+      if (!current.hours.length) find("h3", details[0]).textContent = "HORÁRIOS DAS ATIVIDADES";
+      const scheduleLink = element("a", "activity-schedule-link", "VER PROGRAMAÇÃO");
+      scheduleLink.href = "#horarios";
+      scheduleLink.append(icon("arrow", 16));
+      details[0].append(scheduleLink);
+    }
     detail(1, [], current.address || "Endereço a confirmar. Peça as orientações de chegada pelo Instagram.");
     if (current.phone) {
       const phone = current.phone.replace(/[^+\d]/g, "");

@@ -4,7 +4,7 @@ Foram executados testes próprios em um servidor HTTP estático local, equivalen
 
 ## Resultado
 
-- 21 testes de navegador passaram, sem falhas.
+- 37 testes de navegador passaram, sem falhas, após a inclusão da grade de atividades.
 - Um caso não se aplica: menu móvel no viewport desktop. O menu foi testado e passou no viewport móvel.
 - As quatro páginas carregaram HTML, CSS, JavaScript, fotos, logotipos e fontes locais.
 - Nenhuma requisição externa automática, recurso local quebrado ou erro JavaScript foi detectado nas quatro páginas.
@@ -20,6 +20,14 @@ Foram executados testes próprios em um servidor HTTP estático local, equivalen
 - Os seis arquivos originais foram preservados; a integridade SHA-256 é verificada durante o empacotamento.
 
 A execução usou Chromium instalado no ambiente e Playwright. A sintaxe dos scripts foi verificada por `node --check`, e o lint do repositório passou. Node.js e as ferramentas de teste são usados na manutenção, não são requisitos para executar o ZIP entregue.
+
+## Grade de atividades
+
+A suíte adicional conferiu integralmente os 29 registros da Força Vital e os 30 registros de futevôlei da Vital Beach, incluindo Kids, os cinco períodos livres e a nomenclatura Iniciante A. Também verificou os seis registros de funcional da Vital Beach, com os dois intervalos explícitos de sábado.
+
+Os filtros de unidade, dia, período e modalidade foram exercitados, assim como abas por teclado, estado vazio, links de contato, acesso pela navegação móvel e grades iniciais sem JavaScript. A análise axe também passou nas três unidades da aba Horários. O CT General permanece sem horários de atividades por falta de grade fornecida.
+
+Os testes não substituíram os horários informados por inferências de duração. Na grade da Força Vital, duas modalidades às 19h em segunda e quarta são preservadas.
 
 ## Limites
 

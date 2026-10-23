@@ -11,7 +11,8 @@ target.parent.mkdir(exist_ok=True)
 
 required = ['index.html', 'forca-vital/index.html', 'ct-general/index.html',
             'vital-beach/index.html', 'assets/css/styles.css',
-            'assets/js/config.js', 'assets/js/main.js']
+            'assets/js/config.js', 'assets/js/main.js',
+            'assets/js/schedule.js', 'assets/css/schedule.css']
 for name in required:
     if not (source / name).is_file():
         raise FileNotFoundError(name)

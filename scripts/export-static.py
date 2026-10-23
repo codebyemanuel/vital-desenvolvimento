@@ -9,6 +9,8 @@ from urllib.parse import urlparse, parse_qs, unquote
 from lxml import html, etree
 import shutil
 import re
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'site-html'
@@ -134,4 +136,6 @@ for source, target, slug in routes:
 
 (OUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
 (OUT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>\n')
+if (OUT / 'assets/js/config.js').exists() and (ROOT / 'scripts/sync-schedule.py').exists():
+    subprocess.run([sys.executable, str(ROOT / 'scripts/sync-schedule.py')], check=True)
 print('HTML, CSS, bibliotecas e arquivos oficiais exportados para', OUT)
